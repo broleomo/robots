@@ -9,14 +9,18 @@
     <div class="container">
       <h1>Index</h1>
       <div class="robots">
-        <div class="robot">
-        {{avatar}}
-        {{name}}
-        {{job}}
+        {{#users}}
+        <ul>
+          <li><img src="{{avatar}}"/></li>
+          <li>{{name}}</li>
+          <li>{{job}}</li>
+          <li>{{company}}</li>
+        </ul>
+        {{/users}}
         </div>
 
       </div>
-      <script src="data.js"></script>
-      <script src="main.js"></script>
+      <script src=".app/data.js"></script>
+      <script src=".app/main.js"></script>
   </body>
 </html>
