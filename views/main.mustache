@@ -6,21 +6,28 @@
     <link rel="stylesheet" href="robots.css">
   </head>
   <body>
-    <div class="container">
+    <ul class="top-nav">
+      <a href="/for-hire">For Hire</a>
+      <a href="/employed-robots">Employed</a>
+    </ul>
       <h1>Index</h1>
+    <div class="container">
+
       <div class="robots">
         {{#users}}
-        <ul>
+        <a href="/users/{{id}}">
+        <ul class="robot">
           <li><img src="{{avatar}}"/></li>
-          <li>{{name}}</li>
+          <li class="name">{{name}}</li>
           <li>{{job}}</li>
           <li>{{company}}</li>
         </ul>
+        </a>
         {{/users}}
         </div>
 
       </div>
-      <script src=".app/data.js"></script>
-      <script src=".app/main.js"></script>
+      <script src="data.js"></script>
+      <script src="main.js"></script>
   </body>
 </html>
